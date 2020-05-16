@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "save-planet-earth-2"
+  },
+  "targets": {
+    "save-planet-earth-2": {
+      "hosting": {
+        "website2": [
+          "save-planet-earth-2"
+        ]
+      }
+    }
+  }
+}

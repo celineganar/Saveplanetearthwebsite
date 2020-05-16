@@ -1,0 +1,244 @@
+<section id="banner1">
+
+    <!--
+      ".inner" is set up as an inline-block so it automatically expands
+      in both directions to fit whatever's inside it. This means it won't
+      automatically wrap lines, so be sure to use line breaks where
+      appropriate (<br />).
+    -->
+    <div class="inner">
+  
+      <header>
+        <h2>Carbon Tracker</h2>
+      </header>
+      <p>Take The <strong>Initative</strong> Today
+      <br />
+      
+     
+  
+    </div>
+  
+  </section>
+  
+  
+  <section class="wrapper style3 container special">
+    <header class="major">
+        <h2>Every small steps counts.</h2>
+        <h4>{{displayLevel}}</h4>
+    </header>
+    <form class="col s12"(ngSubmit)="saveEntry8()" #inputForm="ngForm">
+      <div >
+        <button [disabled]="!inputForm.form.valid" class="button primary waves-effect waves-light position:absolute; top:50%;" type="submit" name="action">Show Progress
+          
+         </button>
+        </div>
+      </form>
+      
+    <ngx-charts-pie-chart
+    [view]="view"
+    [scheme]="colorScheme"
+    [results]="countryData"
+    [legend]="showLegend"
+    [legendPosition]="legendPosition"
+    [labels]="showLabels"
+    [doughnut]="isDoughnut"
+    (select)="onSelect($event)"
+    (activate)="onActivate($event)"
+    (deactivate)="onDeactivate($event)"
+    >
+  </ngx-charts-pie-chart>
+      
+    
+<br/>
+<br/>
+    <div class="row">
+        <div class="col-6 col-12-narrower">
+
+            <section>
+                <a class="image featured"><img src="https://www.altavia-group.com/wp-content/uploads/2017/06/49263818_hiweb.jpg" alt="" /></a>
+                <header>
+                    <h3>Food Consumption</h3>
+                </header>
+                <p> Food production is responsible for one-quarter of the world’s greenhouse gas emissions.
+                    Try a new activity to lead a healthier lifestyle.
+
+                </p>
+                <form class="col s12"(ngSubmit)="saveEntry()" #inputForm="ngForm">
+                    <p>Choose an option:</p>
+                <select [formControl]="selectControl"[(ngModel)]="selectControl" class="orange lighten-4 browser-default">
+                
+                    <option value="" disabled selected>Choose your option</option>
+                    <option value="1">Buy only Local Produce: -10 lbs CO2</option>
+                    <option value="2">Eat only Plant based Food for One Day: -6 lbs CO2</option>
+                    <option value="3">Do not buy Fast Food today: -4 lbs CO2</option>
+                    <option value="4">Become Vegetarian: -1784 lbs CO2</option>
+                    <option value="5">Plant a Vegetable Garden: -400 lbs CO2</option>
+                  </select>
+                  <br/>
+                  <div >
+                    <button [disabled]="!inputForm.form.valid" class="button primary waves-effect waves-light position:absolute; top:50%;" type="submit" name="action">Reduce
+                      
+                     </button>
+                    </div>
+                  </form>
+            </section>
+
+        </div>
+        <div class="col-6 col-12-narrower">
+
+            <section>
+                <a class="image featured"><img height="235" src="https://www.sgsgroup.com.br/-/media/global/images/structural-website-images/hero-images/transportation-hero.jpg?la=en" alt="" /></a>
+                <header>
+                    <h3>Travel Activities</h3>
+                </header>
+                <p>Emissions from the transport sector are a major contributor to climate change.
+                     You can do your part and offset some of your CO<sub>2</sub> emissions.</p>
+            
+                <form class="col s12"(ngSubmit)="saveEntry3()" #inputForm="ngForm">
+                    <p>Choose an option:</p>
+                <select [formControl]="selectControl3"[(ngModel)]="selectControl3" class="orange lighten-4 browser-default">
+                
+                    <option value="" disabled selected>Choose your option</option>
+                    <option value="1">Ride a bike to you destination: -3 lbs CO2</option>
+                    <option value="2">Take a maxi instead of driving: -3 lbs CO2</option>
+                    <option value="3">Carpool with friends and family: -178 lbs CO2</option>
+                    <option value="4">Switch to an Electric vehicle: -4100 lbs CO2</option>
+                    <option value="5">Choose a direct flight next time flying: -800 lbs CO2</option>
+                  </select>
+                  <br/>
+                  <div >
+                    <button [disabled]="!inputForm.form.valid" class="button primary waves-effect waves-light position:absolute; top:50%;" type="submit" name="action">Reduce
+                      
+                     </button>
+                    </div>
+                  </form>
+
+            </section>
+
+        </div>
+    </div>
+    <br/>
+<br/>
+<h4>Comparisons in lbs CO<sub>2</sub> /year.</h4>
+<br/>
+    <ngx-charts-pie-grid 
+[view]="view"
+[scheme]="colorScheme"
+[results]="countryData"
+(select)="onSelect($event)">
+</ngx-charts-pie-grid>
+<br/>
+<br/>
+<br/>
+<br/>
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+  </section>
+  
+
+  <section class="wrapper style3 container special">
+
+    <div class="row">
+        <div class="col-6 col-12-narrower">
+
+            <section>
+                <a  class="image featured"><img height="215" src="https://www.waldengalleria.com/wp-content/uploads/sites/3/2019/11/Shopping_Blog-Feature-Image.jpg" alt="" /></a>
+
+                <header>
+                    <h3>Shopping Activities</h3>
+                </header>
+                <p>Minimize your carbon footprint by shopping smarter. The CO<sub>2</sub> involved in making 
+                    and disposing of products like laptops is higher than the CO<sub>2</sub> produced
+                     by the laptop. Therefore, buy less stuff, but buy high quality stuff.
+                     There are a few ways to be a more responsible buyer.</p>
+            
+                <form class="col s12"(ngSubmit)="saveEntry2()" #inputForm="ngForm">
+                    <p>Choose an option:</p>
+                <select [formControl]="selectControl2"[(ngModel)]="selectControl2" class="orange lighten-4 browser-default">
+                
+                    <option value="" disabled selected>Choose your option</option>
+                    <option value="1">Only buy essential products: -8 lbs CO2</option>
+                    <option value="2">Buy used electronics: -600 lbs CO2 </option>
+                    <option value="3">Use only LED bulbs: -5 lbs CO2</option>
+                    <option value="4">Buy energySTAR appliances: -20 lbs CO2</option>
+                    <option value="5">Donate to local NGOs: -30 lbs CO2</option>
+                  </select>
+                  <br/>
+                  <div >
+                    <button [disabled]="!inputForm.form.valid" class="button primary waves-effect waves-light position:absolute; top:50%;" type="submit" name="action">Reduce
+                      
+                     </button>
+                    </div>
+                  </form>
+
+            </section>
+
+        </div>
+        <div class="col-6 col-12-narrower">
+
+            <section>
+                <a class="image featured"><img src="https://www.slate.uk.com/app/uploads/Recycle-Symbol-Green-Leaves-iStock_000042254332_Medium.jpg" alt="" /></a>
+                <header>
+                    <h3>Waste Reduction</h3>
+                </header>
+                <p>Recycling and waste prevention are important ways to shrink your carbon footprint.
+                    Recycling can minimize the rate of global climate change by reducing the extraction of 
+                    raw materials from the earth and the amount of 
+                    fossil fuel burnt in the manufacturing process </p>
+            
+                <form class="col s12"(ngSubmit)="saveEntry4()" #inputForm="ngForm">
+                    <p>Choose an option:</p>
+                <select [formControl]="selectControl4"[(ngModel)]="selectControl4" class="orange lighten-4 browser-default">
+                
+                    <option value="" disabled selected>Choose your option</option>
+                    <option value="1">Use reusable water bottles: -2 lbs CO2</option>
+                    <option value="2">Eat in moderation: -2 lbs CO2</option>
+                    <option value="3">Recycle all paper products: -1 lb CO2</option>
+                    <option value="4">Use reusable take out containers: -2 lbsCO2</option>
+                    <option value="5">LIFESTYLE CHALLENGE: Do not waste any food: -390 lbs CO2</option>
+                  </select>
+                  <br/>
+                  <div >
+                    <button [disabled]="!inputForm.form.valid" class="button primary waves-effect waves-light position:absolute; top:50%;" type="submit" name="action">Reduce
+                      
+                     </button>
+                    </div>
+                  </form>
+
+            </section>
+
+        </div>
+    </div>
+
+    <footer class="major">
+        <form class="col s12"(ngSubmit)="saveEntry5()" #inputForm="ngForm">
+        <h3>Footsteps Tracker</h3>
+        <h5 class="orange-text darken-4 center"> Enter your distance walked (km):</h5>
+        
+        <input type="text" class="form-control" id="survey.rating" required [(ngModel)]="survey.rating" name="surveyratingInputForm" #surveyratingInputForm="ngModel">
+
+
+
+<br/>
+
+     <div style=" text-align: center">
+         <button [disabled]="!inputForm.form.valid" class="btn waves-effect waves-light position:absolute; top:50%;" type="submit" name="action">Submit
+            <i class="material-icons right">send</i>
+          </button>
+         </div>
+     </form>
+    </footer>
+<h3>{{str}}</h3>
+<div class="col-6 col-12-narrower">
+</div>
+
+  </section>
+
+  
+

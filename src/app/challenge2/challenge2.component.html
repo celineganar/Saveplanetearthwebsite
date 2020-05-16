@@ -1,0 +1,94 @@
+<section id="banner10">
+
+    <!--
+      ".inner" is set up as an inline-block so it automatically expands
+      in both directions to fit whatever's inside it. This means it won't
+      automatically wrap lines, so be sure to use line breaks where
+      appropriate (<br />).
+    -->
+    <div class="inner">
+  
+      <header>
+        <h2>Challenges</h2>
+      </header>
+      <p>Can you be the <strong>Change</strong> Today</p>
+    
+      <br />
+      
+    </div>
+  
+  </section>
+
+  <section class="wrapper style5 container special-alt">
+    
+    <div class="row gtr-50">
+
+        <header >
+          <h3 class="center-align">  Fill out and upload the form after completing a challenge </h3>
+        </header>
+        <br/>
+        <br/>
+
+        <form class="col s12"(ngSubmit)="saveEntry()" #inputForm="ngForm">       
+                <h3 class="orange-text darken-4">1.</h3>
+                 <h5 class="indigo-text center"> Challenge Name</h5>
+                 <br/>
+                 <select [formControl]="selectControl"[(ngModel)]="selectControl" class="browser-default">
+                    
+                  <option value="" disabled selected>Choose your option</option>
+                  <option value="1" name="1">Beach Cleanup</option>
+                  <option value="2">Vegetable Garden</option>
+                  <option value="3">Carpool</option>
+                  <option value="4">Poster</option>
+                  <option value="5">Painting</option>
+                  <option value="6">Recycle</option>
+                </select>
+          <br/>
+          <h3 class="orange-text darken-4">2.</h3>
+                     <h5 class="indigo-text darken-4 center"> Enter Date of Activity</h5>
+                     <br/>
+                     <input type="date" class="form-control" id="survey.date" required [(ngModel)]="survey.date" name="surveydateInputForm" #surveydateInputForm="ngModel">
+                    <br/>
+
+                    <h3 class="orange-text">3.</h3>
+                    <h5 class="indigo-text darken-4 center"> Enter Start Time of Activity</h5>
+                    <br/>
+                    <input type="time" class="form-control" id="survey.startTime" required [(ngModel)]="survey.startTime" name="surveystartTimeInputForm" #surveystartTimeInputForm="ngModel">
+                   <br/>
+
+                   <h3 class="orange-text">4.</h3>
+                     <h5 class="indigo-text darken-4 center"> Enter End Time of Activity</h5>
+                     <br/>
+                     <input type="time" class="form-control" id="survey.endTime" required [(ngModel)]="survey.endTime" name="surveyendTimeInputForm" #surveyendTimeInputForm="ngModel">
+                    <br/>
+
+                    <h3 class="orange-text">5.</h3>
+                     <h5 class="indigo-text darken-4 center"> Enter Location</h5>
+                     <br/>
+                     <input type="text" class="form-control" id="survey.loc" required [(ngModel)]="survey.loc" name="surveylocInputForm" #surveylocInputForm="ngModel">
+                    <br/>
+
+                    <h3 class="orange-text">6.</h3>
+                     <h5 class="indigo-text darken-4 center"> Send the Before Picture</h5>
+                     <br/>
+                     <label class="center" for="file">File:</label>
+                     <input type="file" (change)="upload($event)" accept=".png,.jpg" />
+                     <h5 class="indigo-text darken-4 center"> Send the After Picture</h5>
+                     <br/>
+                     <label for="file">File:</label>
+                     <input type="file" (change)="upload($event)" accept=".png,.jpg" />
+                    <br/>
+
+              <div style=" text-align: center">
+                  <button [disabled]="!inputForm.form.valid" class="btn waves-effect waves-light position:absolute; top:50%;" type="submit" name="action">Submit
+                     <i class="material-icons right">send</i>
+                   </button>
+                  </div>
+              </form>
+        </div>
+             
+  
+  </section>
+  <br/>
+  <br/>
+ 

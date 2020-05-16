@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Save Planet Earth Homepage</title>
+  <script src="../js/javascripts1.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-app.js"></script> 
+<script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-auth.js"></script>  
+<script src = "../js/form.js"> </script>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+ <style>
+  .loginbtn {
+    background-color:#47c9af;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+  
+  .loginbtn:hover {
+    opacity: 1;
+  }
+</style>
+</head>
+<body>
+  <nav class="teal" role="navigation">
+    <div class="nav-wrapper container">
+     
+      <ul class="right hide-on-med-and-down">
+        
+        <li><a routerLink="/homepage">Home</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Articles</a></li>
+        <li><a href="#">Challenges</a></li>
+        <li><a href="#">Footsteps</a></li>
+        <li><a href="#">Carbon Tracker</a></li>
+        <li><a href="login.html">Login / Sign Up</a></li>
+        <li><button onclick="signOut()" class="registerbtn"  id="signOut">Signout </button></li>
+      
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Articles</a></li>
+        <li><a href="#">Challenges</a></li>
+        <li><a href="#">Footsteps</a></li>
+        <li><a href="#">Carbon Tracker</a></li>
+        <li><a href="login.html">Login / Sign Up</a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+  <div class="container">
+        <div class="section">
+                <div class="containerx">
+
+<h1>Login</h1>
+
+<hr>
+
+
+<label for="email"><b>Email</b></label>
+<input type="email" placeholder="Enter Email" id="email" required>
+
+<label for="psw"><b>Password</b></label>
+<input type="password" placeholder="Enter Password" id="password" required>
+
+<hr>
+
+<button onclick="signIn()" class="loginbtn"  id="signIn">Login </button>
+
+          <div class="login-bottom">
+              <h4>Don't have an Account? <a href="register.html"> Register Now!</a></h4>
+              
+          </div>
+      </div>
+    </div>
+  </div>
+
+
+  
+
+  
+
+
+ 
+
+  <footer class="page-footer teal">
+    
+    <div class="footer-copyright">
+      <div class="container">
+      Managed by <a class="brown-text text-lighten-3" href="http://saveplanetearth.design.blog">ACA Engineers</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="../js/materialize.js"></script>
+  <script src="../js/init.js"></script>
+  <script src="../js/javascript1.js"></script>
+  </body>
+</html>

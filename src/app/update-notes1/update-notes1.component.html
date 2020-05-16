@@ -1,0 +1,30 @@
+<p>notes works!</p>
+<div *ngIf="afAuth.user | async as user">
+<p>Welcome {{ email }}!</p>
+<form class="col s12"(ngSubmit)="selectItems()" #inputForm="ngForm">
+  
+<div style=" text-align: center">
+  <button class="btn waves-effect waves-light position:absolute; top:50%;" type="submit" name="action">Submit
+     <i class="material-icons right">send</i>
+   </button>
+  </div>
+</form>
+<div *ngFor="let groceryItem of groceryItems | async">
+  
+  <div class="name-display">
+    <p> earned</p>{{ groceryItem.earned }}
+  
+  </div>
+  </div>
+
+</div>
+
+<ngx-charts-advanced-pie-chart
+  [view]="view"
+  [scheme]="colorScheme"
+  [results]="single"
+  [gradient]="gradient"
+  (select)="onSelect($event)"
+  (activate)="onActivate($event)"
+  >
+</ngx-charts-advanced-pie-chart>

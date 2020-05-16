@@ -1,0 +1,93 @@
+<section id="banner2">
+    <div class="inner">
+      <header>
+        <h4>CO<sub>2</sub> Calculator</h4>
+      </header> 
+    </div> 
+</section>
+<br/>
+<br/>
+
+  
+
+    <!-- One -->
+      <section class="wrapper style5 container special-alt">
+        <nav class="nav white" >
+             
+              <ul >
+                
+                <li ><a class="teal-text" style="font-weight: bold;" routerLink="/ctrack2">Lifestyle</a></li>
+                <li><a class="teal-text" routerLink="/ctrack3">Vehicle</a></li>
+                <li><a class="teal-text" routerLink="/ctrack4">Household</a></li>
+                <li><a class="orange-text"  routerLink="/ctrack5">Results</a></li>
+              
+              </ul>
+              </nav>
+        <div class="row gtr-50">
+            <div class="col-8 col-12-narrower">
+
+            <header >
+              <h3 class="center-align">  Describe Your Lifestyle: </h3>
+            </header>
+            <br/>
+            <br/>
+
+            <form class="col s12"(ngSubmit)="saveEntry()" #inputForm="ngForm">
+                <h3>1.</h3>
+                     <h5 class="orange-text darken-4"><strong>Do you recycle?</strong></h5>
+                    <br/>
+                     <p>
+                        <label>
+                          <input class="with-gap " name="group1" type="radio"  />
+                          <span class="white-text">Yes</span>
+                        </label>
+                        <br/>
+                        <label>
+                            <input class="with-gap white" name="group1" type="radio"  />
+                            <span class="white-text">No</span>
+                          </label>
+                      </p>
+                    
+                      <header class="special container">
+                        <span class="icon solid fa-leaf"></span>
+                        </header>
+                    <h3>2.</h3>
+                     <h5 class="orange-text darken-4"> How would you describe your eating habits?</h5>
+                     <br/>
+                     <select [formControl]="selectControl"[(ngModel)]="selectControl" class="browser-default">
+                        
+                      <option value="" disabled selected>Choose your option</option>
+                      <option value="1" name="1">Meat in every meal</option>
+                      <option value="2">Average Omnivore</option>
+                      <option value="3">No Beef</option>
+                      <option value="4">Vegetarian</option>
+                      <option value="5">Vegan</option>
+                    </select>
+              <br/>
+              <header class="special container">
+                <span class="icon solid fa-leaf"></span>
+                </header>
+                  <div style=" text-align: center">
+                      <button [disabled]="!inputForm.form.valid" class="btn waves-effect waves-light position:absolute; top:50%;" type="submit" name="action">Next
+                         <i class="material-icons right">send</i>
+                       </button>
+                      </div>
+                  </form>
+            </div>
+                  <div class=" indigo lighten-5 col-4 col-12-narrower imp-narrower">
+
+                    <ul >
+                       <h4 class=" center orange-text darken-4">Fun Fact! </h4>
+                       <p class="indigo-text">According to the <strong>Environmental Protection Agency </strong>
+                        : <strong>"</strong>Emissions from beef cattle represent <strong>2 percent </strong> of total 
+                        U.S. greenhouse gas emissions.<strong>" </strong> </p>
+                       <img src="http://pngimg.com/uploads/cow/cow_PNG50576.png">
+                    </ul>
+                  
+                </div>
+        </div>
+      </section>
+      <br/>
+      <br/>
+
+     

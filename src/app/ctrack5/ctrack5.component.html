@@ -1,0 +1,99 @@
+
+<section id="banner">
+
+  <!--
+    ".inner" is set up as an inline-block so it automatically expands
+    in both directions to fit whatever's inside it. This means it won't
+    automatically wrap lines, so be sure to use line breaks where
+    appropriate (<br />).
+  -->
+  <div class="inner">
+
+    <header>
+      <h2>Your Carbon FootPrint is</h2>
+      <h1>{{exp}} lbs CO<sub>2</sub>/year</h1>
+    </header>
+    <p> <strong>{{trees}}</strong> Trees are Required to Counterbalance Your
+      Carbon Emissions.
+    <br />
+    
+    <footer>
+    
+      <ul class="buttons stacked">
+        <form class="col s12"(ngSubmit)="saveEntry()" #inputForm="ngForm">
+        <button><a type="submit" name="action" class=" teal-text button  fit scrolly">RESULTS</a></button>
+      </form>
+      <li><a routerLink="/ctrack6" class="button fit scrolly">REDUCE YOUR FOOTPRINT</a></li>
+      </ul>
+      
+    </footer>
+
+  </div>
+
+</section>
+<article id="main">
+<header class="special container">
+  <span class="icon solid fa-leaf"></span>
+
+<h3 class="teal-text">Your Carbon Footprint is</h3>
+<h1 class="orange-text">{{percent}}%</h1> 
+<h4 class="teal-text">of Trinidad and Tobago's Linear Reduction
+  of its average Carbon Emissions</h4>
+
+
+<ngx-charts-bar-horizontal
+  [view]="view"
+  [scheme]="colorScheme"
+  [results]="countryData"
+  [xAxis]="showXAxis"
+  [yAxis]="showYAxis"
+  [legend]="showLegend"
+  [showXAxisLabel]="showXAxisLabel"
+  [showYAxisLabel]="showYAxisLabel"
+  [xAxisLabel]="xAxisLabel"
+  [yAxisLabel]="yAxisLabel"
+  
+  (select)="onSelect($event)"
+  (activate)="onActivate($event)"
+  (deactivate)="onDeactivate($event)">
+</ngx-charts-bar-horizontal>
+</header>
+<br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+<header class="special container">
+  <span class="icon solid fa-leaf"></span>
+ <br/>
+  
+  <h4 class="orange-text">your annual carbon footprint by Lifestyle, Vehicular Transportation and Household
+    Per lbs CO<sub>2</sub>/year
+  </h4>
+<ngx-charts-advanced-pie-chart
+  [view]="view"
+  [scheme]="colorScheme"
+  [results]="countryData2"
+  (select)="onSelect($event)"
+  (activate)="onActivate($event)"
+  (deactivate)="onDeactivate($event)"
+  >
+</ngx-charts-advanced-pie-chart>
+</header>
+<br/>
+<header class="special container">
+  <span class="icon solid fa-leaf"></span>
+</header>
+<section class="center">
+<footer>
+  <h4 class="teal-text lighten-2">Start Decreasing Your Environmental Impact Now!</h4>
+  <ul class="buttons">
+    <li><a routerLink="/ctrack6" class="center button primary">Reduce your footprint</a></li>
+  </ul>
+</footer>
+</section>

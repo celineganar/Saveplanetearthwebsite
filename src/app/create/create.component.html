@@ -1,0 +1,94 @@
+<!--The code to display images -->
+<!--The code to display images -->
+<section id="banner3">
+
+  
+  <div class="inner">
+
+    <header>
+      <h2>Create Events</h2>
+    </header>
+    <p>Be The <strong>Change</strong> Today
+    <br />
+    
+   
+
+  </div>
+
+</section>
+ <br/>
+ <br/>
+ <br/>
+ <br/>
+ <br/>
+ <br/>
+  <div class="row">
+    <form class="col s12" [formGroup]='createEventForm'>
+      <div class="row">
+        
+        <div class="input-field col s6">
+         <div class="col s6">
+           <label for="event_name">Event Name</label>
+          </div>
+          <input id="event_name" type="text" class="validate"formControlName="event_name"placeholder="Event Name">
+          
+        </div>
+ 
+        
+        <div class="input-field col s6">
+         <div class="col s6">
+           <label for="currency">Currency</label>
+          </div>
+          <input id="currency" type="text" class="validate" formControlName="currency"placeholder="Currency">
+          
+        </div>
+      </div>
+     
+    
+      
+      <div class="row">
+       
+     <div class="input-field col s6">
+       <div class="col s6">
+         <label for="start_timezone">Start Timezone</label>
+        </div>
+       <input id="start_timezone" type="text" class="validate"formControlName="start_timezone"placeholder="Start Timezone">
+       
+     </div>
+ 
+     <div class="input-field col s6">
+       <div class="col s6">
+         <label for="start_utc">Start UTC</label>
+        </div>
+       <input id="start_utc" type="text" class="validate"formControlName="start_utc"placeholder="Start UTC">
+       
+     </div>
+      </div>
+ 
+      <div class="row">
+      
+     <div class="input-field col s6">
+       <div class="col s6">
+         <label for="end_timezone">End Timezone</label>
+        </div>
+       <input id="end_timezone" type="text" class="validate" formControlName="end_timezone"placeholder="End Timezone">
+       
+     </div>
+ 
+     
+     <div class="input-field col s6">
+       <div class="col s6">
+         <label for="end_utc">End UTC</label>
+        </div>
+       <input id="end_utc" type="text" class="validate"formControlName="end_utc"placeholder="End UTC">
+       
+     </div>
+      </div>
+      <div style=" text-align: center">
+       <button (click)="createIt(createEventForm.value)" class="btn waves-effect waves-light position:absolute; top:50%;" type="submit" name="action">Submit
+          <i class="material-icons right">send</i>
+        </button>
+       </div>
+    </form>
+    
+  </div>

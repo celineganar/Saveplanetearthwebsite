@@ -1,0 +1,48 @@
+<section id="banner8">
+
+   
+    <div class="inner">
+  
+      <header>
+        <h2>Login Page</h2>
+      </header>
+      
+    </div>
+  
+  </section>
+<div class="container">
+    <div class="section">
+            <div class="containerx">
+
+
+
+<hr>
+
+<div class="row">
+    <form class="col s12" [formGroup]="loginForm">
+    <label for="email"><b>Email</b></label>
+    <input type="email" formControlName="email" class="form-control" placeholder="Enter Email" id="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" class="form-control" formControlName="password" placeholder="Enter Password" id="password" required>
+    <label class="error">{{errorMessage}}</label>
+    <hr>
+
+    <button (click)="tryLogin(loginForm.value)"  class="loginbtn indigo lighten-2"  id="signIn">Login </button>
+    </form>
+</div>
+<footer>
+    <div style=" text-align: center">
+    <div class="col s12">
+      <button class="btn orange waves-effect waves-light position:absolute; top:50%;" (click)="tryFacebookLogin()">Login with Facebook</button>
+    </div>
+</div>
+</footer>
+      <div class="login-bottom">
+          <h4>Don't have an Account? <a routerLink="/register"> Register Now!</a></h4>
+          
+      </div>
+  </div>
+</div>
+</div>
+

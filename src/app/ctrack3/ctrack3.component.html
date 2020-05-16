@@ -1,0 +1,118 @@
+<section id="banner4">
+    <div class="inner">
+      <header>
+        <h4>CO<sub>2</sub> Calculator</h4>
+      </header> 
+    </div> 
+</section>
+<br/>
+<br/>
+
+  
+
+    <!-- One -->
+      <section class=" indigo lighten-4 wrapper style5 container special-alt">
+        <nav class="nav white" >
+             
+          <ul >
+                
+                <li ><a class="orange-text" routerLink="/ctrack2">Lifestyle</a></li>
+                <li><a class="orange-text" style="font-weight: bold;" routerLink="/ctrack3">Vehicle</a></li>
+                <li><a class="orange-text" routerLink="/ctrack4">Household</a></li>
+                <li><a class="teal-text"  routerLink="/ctrack5">Results</a></li>
+              
+              </ul>
+              </nav>
+              
+        <div class="row gtr-50  indigo lighten-4">
+          
+            <div class=" indigo lighten-4 col-8 col-12-narrower">
+
+            <header >
+              <h3 class="center-align indigo-text">  How do you typically get around? </h3>
+            </header>
+            <br/>
+            <br/>
+            <header class="special container">
+                <span class="icon solid fa-gas-pump"></span>
+                </header>
+
+            <form class="col s12"(ngSubmit)="saveEntry()" #inputForm="ngForm">
+                <h3 class="indigo-text">1.</h3>
+                     <h5 class="orange-text darken-4 center"><strong>What is Your Mode of Transportation?</strong></h5>
+                    <br/>
+                     <p>
+                        <label>
+                            <img style="max-width:50% ;"src="https://webstockreview.net/images/car-clipart-transparent-background-13.png">
+                          <input class="with-gap " name="group1" type="radio"  />
+                          <span class="indigo-text">Car</span>
+                        </label>
+                        <br/>
+                        <label>
+                            
+                            <input class="with-gap white" name="group1" type="radio"  />
+                            <span class="indigo-text">SUV</span>
+                            <img src="https://webstockreview.net/images250_/clipart-car-transparent-background-18.png">
+                          </label>
+                          <br/>
+                         
+                          <label>
+                            <img style="max-width:50% ;"src=" https://pngimg.com/uploads/pickup_truck/pickup_truck_PNG16297.png">
+                          <input class="with-gap " name="group1" type="radio"  />
+                          <span class="indigo-text">PickUp Truck</span>
+                        </label>
+                      </p>
+                    
+                      <header class="special container">
+                        <span class="icon solid fa-gas-pump"></span>
+                        </header>
+                    <h3 class="indigo-text">2.</h3>
+                     <h5 class="orange-text darken-4 center"> What Fuel Type does your Vehicle Use?</h5>
+                     
+                     <select [formControl]="selectControl"[(ngModel)]="selectControl" class="browser-default">
+                        
+                      <option value="" disabled selected>Choose your option</option>
+                      <option value="Super">Super</option>
+                      <option value="Premium">Premium</option>
+                      <option value="Hybrid">Hybrid</option>
+                      <option value="Diesel">Diesel</option>
+                      <option value="Electric">Electric</option>
+                    </select>
+              <br/>
+              <header class="special container">
+                <span class="icon solid fa-gas-pump"></span>
+                </header>
+                <h3 class="indigo-text">3.</h3>
+                     <h5 class="orange-text darken-4 center"> What is Your Weekly Mileage (km)?</h5>
+                     <br/>
+                     <input type="text" class="form-control" id="survey.rating" required [(ngModel)]="survey.rating" name="surveyratingInputForm" #surveyratingInputForm="ngModel">
+
+
+
+<br/>
+
+                  <div style=" text-align: center">
+                      <button [disabled]="!inputForm.form.valid" class="btn waves-effect waves-light position:absolute; top:50%;" type="submit" name="action">Next
+                         <i class="material-icons right">send</i>
+                       </button>
+                      </div>
+                  </form>
+            </div>
+            <div class=" teal  lighten-3 col-4 col-12-narrower imp-narrower">
+
+              <ul >
+                 <h4 class=" center orange-text darken-4">Fun Fact! </h4>
+                 <p class="white-text">Transportation accounts for <strong>1/7</strong> of
+                the Global CO<sub>2</sub> emissions by sector. It is a proven fact that Diesel
+              engines are more environmentally friendly when compared to regular Petrol fuel.</p>
+                 <img src="https://www.pngkey.com/png/full/92-922091_home-vehicle-replacement-smoke-car-gif-png.png">
+              </ul>
+            
+          </div>
+                 
+        </div>
+      </section>
+      <br/>
+      <br/>
+
+     

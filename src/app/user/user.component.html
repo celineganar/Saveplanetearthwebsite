@@ -1,0 +1,44 @@
+<br/>
+<section class="center">
+<ul class="buttons">
+  <li><a (click)="logout()" class="center button primary">LOGOUT</a></li>
+</ul>
+</section>
+<br/>
+<section id="banner3">
+
+  
+  <div class="inner">
+
+    <header>
+      <h2>Welcome {{email}}</h2>
+    </header>
+    
+    
+   
+
+  
+
+<h3> Points </h3>
+<footer>
+    
+  <ul class="buttons stacked">
+    <form class="col s12"(ngSubmit)="saveEntry()" #inputForm="ngForm">
+    <button><a type="submit" name="action" class=" teal-text button  fit scrolly">RESULTS</a></button>
+  </form>
+  
+  </ul>
+  
+</footer>
+<ngx-charts-advanced-pie-chart
+  [view]="view"
+  [scheme]="colorScheme"
+  [results]="countryData"
+  (select)="onSelect($event)"
+  (activate)="onActivate($event)"
+  (deactivate)="onDeactivate($event)"
+  >
+</ngx-charts-advanced-pie-chart>
+</div>
+
+</section>

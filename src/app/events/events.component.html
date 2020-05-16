@@ -1,0 +1,51 @@
+<!--The code to display images -->
+<section id="banner1">
+
+  <!--
+    ".inner" is set up as an inline-block so it automatically expands
+    in both directions to fit whatever's inside it. This means it won't
+    automatically wrap lines, so be sure to use line breaks where
+    appropriate (<br />).
+  -->
+  <div class="inner">
+
+    <header>
+      <h2>EVENTS</h2>
+    </header>
+    <p>Be The <strong>Change</strong> Today
+    <br />
+    
+   
+
+  </div>
+
+</section>
+ <br/>
+ <br/>
+ <div style=" text-align: center">
+  <a routerLink="/create" class="waves-effect waves-light btn-small position:absolute; top:50%; "><i class="material-icons right">event</i>Create an Event!</a>
+ </div>
+ 
+
+   <article id="main">
+
+    <header class="special container">
+      <span class="icon solid fa-calendar"></span>
+    </header>
+
+    <!-- One -->
+      <section class="wrapper style4 container">
+
+        <!-- Content -->
+          <div style=" text-align: center;"  *ngFor="let event of data" class="teal-text content">
+            <section>
+              <a href="#" class="image featured"><img [src]="event.logo.url" alt="" /></a>
+              <header>
+                <h3> {{ event.name.text }}</h3>
+              </header>
+              <p>Date: {{ event.start.local }}</p>
+            </section>
+          </div>
+
+      </section>
+</article>

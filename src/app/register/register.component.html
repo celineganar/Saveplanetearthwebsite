@@ -1,0 +1,54 @@
+<section id="banner8">
+  <div class="inner">
+
+    <header>
+      <h2>Register Page</h2>
+    </header>
+    
+  </div>
+
+</section>
+<section class="wrapper style5 container special-alt">
+    
+  <div class="row gtr-50">
+
+      <form class="col s12"[formGroup]="registerForm">
+        <div class="form-group">
+          <h5 class="indigo-text darken-4 center">Email address</h5>
+          <input type="email" formControlName="email" class="form-control">
+        </div>
+        <br/>
+        <div class="form-group">
+          <h5 class="indigo-text darken-4 center">Password</h5>
+          <input type="password" class="form-control" formControlName="password">
+          
+        </div>
+        <div class="form-group">
+          <h5 class="indigo-text darken-4 center">Date of Birth</h5>
+          <input type="date">
+        </div>
+        
+        <div style=" text-align: center">
+        <button type="submit" (click)="tryRegister(registerForm.value)" class="btn btn-default">Register</button>
+        </div>
+      </form>
+
+      <h5 class="error center">{{errorMessage}}</h5>
+        <h5 class="success center">{{successMessage}}</h5>
+<br/>
+<br/>
+      <h4 class="orange-text darken-4 center">Register Using Facebook</h4>
+      <br/>
+      <div style=" text-align: center" >
+      <button type="button" class="btn orange waves-effect waves-light position:absolute; top:50%;" (click)="tryFacebookLogin()">Register with Facebook</button>
+    
+      </div>
+  
+
+<br/>
+      </div>
+      <h5 class="indigo-text text-lighten-2 center">Already have an account? <a routerLink="/login">Login</a></h5>
+      
+</section>
+    
+   
